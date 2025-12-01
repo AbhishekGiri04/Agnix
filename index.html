@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/assets/favicon.738ee8b0.svg" />
+    <link rel="icon" type="image/svg+xml" href="https://mir-s3-cdn-cf.behance.net/project_modules/hd/ca226b34153161.56c5d4776abb7.png" />
     <meta
       name="viewport"
       content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, target-densityDpi=device-dpi, minimal-ui"
@@ -10,8 +10,61 @@
     <title>Agnix - Abhishek Giri</title>
     <script type="module" crossorigin src="/assets/index.b8dab8e6.js"></script>
     <link rel="stylesheet" href="/assets/index.034a5313.css">
+    <style>
+      @keyframes fadeInUp {
+        from {
+          opacity: 0;
+          transform: translateY(30px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+
+      .color-box {
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        margin-right: 8px;
+        background: white;
+        opacity: 0.9;
+      }
+      .skill-badge {
+        display: flex;
+        align-items: center;
+        color: white;
+        padding: 10px 20px;
+        border-radius: 25px;
+        font-size: 13px;
+        font-weight: 600;
+        border: 2px solid rgba(255,255,255,0.2);
+        letter-spacing: 0.5px;
+        transition: all 0.3s ease;
+        cursor: pointer;
+        box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+      }
+      .skill-badge:hover {
+        transform: translateY(-5px) scale(1.05);
+        box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+      }
+    </style>
+
   </head>
   <body class="light-theme">
+    <script>
+      // Show skills after main content loads
+      window.addEventListener('load', function() {
+        setTimeout(function() {
+          const skillsContainer = document.getElementById('skillsContainer');
+          if (skillsContainer) {
+            skillsContainer.style.opacity = '1';
+            skillsContainer.style.transform = 'translateY(0)';
+          }
+        }, 2000); // 2 second delay
+      });
+    </script>
     <div class="experience">
       <canvas class="experience-canvas"></canvas>
     </div>
@@ -69,11 +122,27 @@
               <p class="hero-main-description">
                 AI & ML Developer | Full-Stack Development Enthusiast | Innovation Driver
               </p>
-              <div style="display: flex; gap: 15px; margin-top: 25px; flex-wrap: wrap; justify-content: center;">
-                <span style="background: linear-gradient(135deg, #1e40af, #3b82f6); color: white; padding: 12px 24px; border-radius: 30px; font-size: 14px; font-weight: 700; box-shadow: 0 8px 25px rgba(30,64,175,0.4); border: 2px solid rgba(255,255,255,0.3); text-transform: uppercase; letter-spacing: 1px;">SAARTHI FINALIST</span>
-                <span style="background: linear-gradient(135deg, #dc2626, #ef4444); color: white; padding: 12px 24px; border-radius: 30px; font-size: 14px; font-weight: 700; box-shadow: 0 8px 25px rgba(220,38,38,0.4); border: 2px solid rgba(255,255,255,0.3); text-transform: uppercase; letter-spacing: 1px;">MARITHON FINALIST</span>
-                <span style="background: linear-gradient(135deg, #f59e0b, #fbbf24); color: white; padding: 12px 24px; border-radius: 30px; font-size: 14px; font-weight: 700; box-shadow: 0 8px 25px rgba(245,158,11,0.4); border: 2px solid rgba(255,255,255,0.3); text-transform: uppercase; letter-spacing: 1px;">AMAZON ML CHALLENGE RANK 234</span>
-                <span style="background: linear-gradient(135deg, #16a34a, #22c55e); color: white; padding: 12px 24px; border-radius: 30px; font-size: 14px; font-weight: 700; box-shadow: 0 8px 25px rgba(22,163,74,0.4); border: 2px solid rgba(255,255,255,0.3); text-transform: uppercase; letter-spacing: 1px;">AI RESEARCHER</span>
+              <div class="skills-container" style="display: flex; gap: 12px; margin-top: 20px; flex-wrap: wrap; justify-content: center; opacity: 0; transform: translateY(20px); transition: all 0.8s ease 2s;" id="skillsContainer">
+                <span class="skill-badge" style="background: linear-gradient(135deg, #3b82f6, #2563eb);">
+                  <div class="color-box" style="background: #60a5fa;"></div>
+                  Python Specialist
+                </span>
+                <span class="skill-badge" style="background: linear-gradient(135deg, #f97316, #ea580c);">
+                  <div class="color-box" style="background: #fdba74;"></div>
+                  Java Expert
+                </span>
+                <span class="skill-badge" style="background: linear-gradient(135deg, #06b6d4, #0891b2);">
+                  <div class="color-box" style="background: #67e8f9;"></div>
+                  IoT Explorer
+                </span>
+                <span class="skill-badge" style="background: linear-gradient(135deg, #ec4899, #db2777);">
+                  <div class="color-box" style="background: #f9a8d4;"></div>
+                  National Hackathon Finalist
+                </span>
+                <span class="skill-badge" style="background: linear-gradient(135deg, #10b981, #059669);">
+                  <div class="color-box" style="background: #6ee7b7;"></div>
+                  AI Researcher
+                </span>
               </div>
             </div>
 
@@ -102,23 +171,39 @@
           </div>
 
           <div class="section-detail-wrapper">
-            <!-- <h3 class="section-heading">Hello!</h3> -->
-            <p class="section-text">
-              Welcome to my digital space! I'm Abhishek Giri, an AI & ML enthusiast and full-stack developer passionate about creating innovative solutions. With expertise in Python, JavaScript, and modern web technologies, I build intelligent applications that solve real-world problems.
-            </p>
-            <p class="section-text">
-              My journey in artificial intelligence and machine learning has led me to exciting achievements including being a SAARTHI Finalist, MARITHON Finalist, and achieving Rank 234 in the Amazon ML Challenge. I specialize in developing AI-powered applications, machine learning models, and scalable web solutions.
-            </p>
-            <p class="section-text">
-              I'm deeply involved in the tech community, contributing to open-source projects and staying updated with the latest advancements in AI/ML. My expertise spans across deep learning frameworks, data science, cloud computing, and modern web development stacks.
-            </p>
-            <p class="section-text">
-              When I'm not coding or training models, you'll find me exploring new technologies, participating in hackathons, or sharing knowledge with fellow developers. I believe in continuous learning and pushing the boundaries of what's possible with technology.
-            </p>
-            <!-- <h3 class="section-heading">Lorem Ipsum</h3>
-            <p class="section-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic expedita qui quae officiis, magni velit iste repellat consequuntur temporibus. Quasi atque officia iste beatae rerum, harum itaque accusamus. At, natus?</p> -->
-            <!-- <h3 class="section-heading">Lorem Ipsum</h3>
-            <p class="section-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic expedita qui quae officiis, magni velit iste repellat consequuntur temporibus. Quasi atque officia iste beatae rerum, harum itaque accusamus. At, natus?</p> -->
+            <div style="position: relative; background: linear-gradient(135deg, rgba(55,65,81,0.02), rgba(75,85,99,0.02)); padding: 40px 35px; border-radius: 20px; border: 1px solid rgba(55,65,81,0.08); margin-top: 20px; overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,0.03);">
+              
+              <!-- Professional decorative elements -->
+              <div style="position: absolute; top: -40px; right: -40px; width: 80px; height: 80px; background: linear-gradient(45deg, rgba(55,65,81,0.05), rgba(75,85,99,0.05)); border-radius: 50%; opacity: 0.7;"></div>
+              <div style="position: absolute; bottom: -25px; left: -25px; width: 50px; height: 50px; background: linear-gradient(45deg, rgba(107,114,128,0.05), rgba(156,163,175,0.05)); border-radius: 50%; opacity: 0.5;"></div>
+              
+              <div style="position: relative; z-index: 2;">
+                <p style="margin: 0 0 25px 0; font-size: 16px; line-height: 1.8; color: var(--color-text); opacity: 0.95; text-align: justify; position: relative;">
+                  <span style="position: absolute; left: -20px; top: -5px; font-size: 40px; color: rgba(55,65,81,0.2); font-family: serif;">“</span>
+                  Motivated and detail-oriented <strong style="color: rgba(55,65,81,0.9); font-weight: 700;">pre-final year B.Tech CSE (AI & ML) student</strong> at <strong style="color: rgba(75,85,99,0.9); font-weight: 700;">Graphic Era Hill University, Dehradun</strong>, specializing in <strong style="color: rgba(107,114,128,0.9); font-weight: 700;">Artificial Intelligence, Machine Learning, and full-stack engineering</strong>. I build intelligent, scalable, and high-performance systems by integrating strong software engineering principles with advanced AI/ML methodologies.
+                </p>
+                
+                <div style="height: 1px; background: linear-gradient(90deg, rgba(55,65,81,0.2), rgba(107,114,128,0.2), rgba(156,163,175,0.2)); margin: 25px 0; border-radius: 1px;"></div>
+                
+                <p style="margin: 0 0 25px 0; font-size: 16px; line-height: 1.8; color: var(--color-text); opacity: 0.95; text-align: justify;">
+                  With hands-on experience in <strong style="color: rgba(75,85,99,0.9); font-weight: 700;">Python, Java, modern JavaScript frameworks, and cloud-native architectures</strong>, I excel at transforming complex problem statements into reliable, production-ready solutions. I have contributed to AI-driven platforms, IoT automation systems, and collaborative developer tools—earning national recognition as a <strong style="color: rgba(55,65,81,0.9); font-weight: 700;">SAARTHI Finalist, MariTHON Finalist, and securing Global Rank 234 in the Amazon ML Challenge</strong>.
+                </p>
+                
+                <div style="height: 1px; background: linear-gradient(90deg, rgba(107,114,128,0.2), rgba(156,163,175,0.2), rgba(55,65,81,0.2)); margin: 25px 0; border-radius: 1px;"></div>
+                
+                <p style="margin: 0 0 25px 0; font-size: 16px; line-height: 1.8; color: var(--color-text); opacity: 0.95; text-align: justify;">
+                  My technical strengths include <strong style="color: rgba(107,114,128,0.9); font-weight: 700;">end-to-end ML pipelines, deep learning workflows, NLP, data engineering, and real-time system development</strong>, along with cloud deployments using <strong style="color: rgba(75,85,99,0.9); font-weight: 700;">AWS, Firebase, and modern DevOps workflows</strong>. I specialize in building intelligent applications that solve real-world problems through cutting-edge technology integration.
+                </p>
+                
+                <div style="height: 1px; background: linear-gradient(90deg, rgba(156,163,175,0.2), rgba(55,65,81,0.2), rgba(107,114,128,0.2)); margin: 25px 0; border-radius: 1px;"></div>
+                
+                <p style="margin: 0; font-size: 16px; line-height: 1.8; color: var(--color-text); opacity: 0.95; text-align: justify; position: relative;">
+                  Actively engaged in <strong style="color: rgba(55,65,81,0.9); font-weight: 700;">open-source development and tech communities</strong>, I continuously explore advancements in intelligent automation, scalable architectures, and emerging technologies like <strong style="color: rgba(107,114,128,0.9); font-weight: 700;">Web3</strong>. With <strong style="color: rgba(75,85,99,0.9); font-weight: 700;">strong DSA fundamentals, a problem-solving mindset, and a commitment to engineering excellence</strong>, I aim to contribute to impactful, user-centric solutions in <strong style="color: rgba(55,65,81,0.9); font-weight: 700;">Software Engineering and AI/ML Engineering roles</strong>.
+                  <span style="position: absolute; right: -10px; bottom: -10px; font-size: 40px; color: rgba(55,65,81,0.2); font-family: serif;">”</span>
+                </p>
+              </div>
+              
+            </div>
           </div>
         </section>
 
@@ -142,22 +227,40 @@
           </div>
 
           <div class="section-detail-wrapper">
-            <h3 class="section-heading">AI-Powered Healthcare Assistant</h3>
-            <p class="section-text">
-              Developed an intelligent healthcare chatbot using NLP and machine learning to provide preliminary medical guidance. Integrated with symptom analysis and appointment scheduling features, helping users get quick medical insights.
-            </p>
-            <h3 class="section-heading">Smart Recommendation Engine</h3>
-            <p class="section-text">
-              Built a sophisticated recommendation system using collaborative filtering and deep learning. Implemented for e-commerce platforms to enhance user experience and increase conversion rates through personalized product suggestions.
-            </p>
-            <h3 class="section-heading">Real-time Analytics Dashboard</h3>
-            <p class="section-text">
-              Created a comprehensive analytics platform using React, Node.js, and Python. Features real-time data visualization, predictive analytics, and automated reporting for business intelligence and decision-making.
-            </p>
-            <h3 class="section-heading">Computer Vision Security System</h3>
-            <p class="section-text">
-              Developed an advanced surveillance system using OpenCV and deep learning for face recognition and anomaly detection. Implemented real-time monitoring with alert systems for enhanced security applications.
-            </p>
+            <div style="display: grid; gap: 25px; margin-top: 20px;">
+              
+              <div style="background: linear-gradient(135deg, rgba(59,130,246,0.1), rgba(147,197,253,0.1)); padding: 25px; border-radius: 20px; border: 1px solid rgba(59,130,246,0.2); transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(59,130,246,0.1);" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 8px 25px rgba(59,130,246,0.2)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 15px rgba(59,130,246,0.1)';">
+                <h4 style="margin: 0 0 12px 0; font-size: 18px; font-weight: 700; color: var(--color-text);">CodeSphere – Real-Time Collaborative Code Editor Platform</h4>
+                <p style="margin: 0; font-size: 14px; line-height: 1.6; color: var(--color-text); opacity: 0.9;">A full-stack collaborative development environment enabling real-time programming and team-based software engineering. Designed and engineered a VS Code–style collaborative code editor supporting real-time multi-user editing, live cursors, and instant execution of C++, Java, Python, and JavaScript. Implemented a scalable backend using Express.js, WebSockets, and room-based session management, enabling seamless synchronization with sub-second latency.</p>
+              </div>
+              
+              <div style="background: linear-gradient(135deg, rgba(16,185,129,0.1), rgba(110,231,183,0.1)); padding: 25px; border-radius: 20px; border: 1px solid rgba(16,185,129,0.2); transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(16,185,129,0.1);" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 8px 25px rgba(16,185,129,0.2)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 15px rgba(16,185,129,0.1)';">
+                <h4 style="margin: 0 0 12px 0; font-size: 18px; font-weight: 700; color: var(--color-text);">Maritime Intelligence Platform – AI-Powered SOF Document Processing System</h4>
+                <p style="margin: 0; font-size: 14px; line-height: 1.6; color: var(--color-text); opacity: 0.9;">An intelligent maritime workflow automation system for extracting operational events and analytics from complex SOF documents. Built an end-to-end AI platform achieving 95% accurate OCR and domain-specific NLP event extraction from maritime Statement of Facts (SOF) documents. Developed custom deep-learning models and OCR pipelines for multi-format PDF parsing, laytime event detection, and multilingual text interpretation.</p>
+              </div>
+              
+              <div style="background: linear-gradient(135deg, rgba(236,72,153,0.1), rgba(251,207,232,0.1)); padding: 25px; border-radius: 20px; border: 1px solid rgba(236,72,153,0.2); transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(236,72,153,0.1);" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 8px 25px rgba(236,72,153,0.2)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 15px rgba(236,72,153,0.1)';">
+                <h4 style="margin: 0 0 12px 0; font-size: 18px; font-weight: 700; color: var(--color-text);">SmartAssist Home – IoT Accessibility & Automation Ecosystem</h4>
+                <p style="margin: 0; font-size: 14px; line-height: 1.6; color: var(--color-text); opacity: 0.9;">A scalable IoT automation system focused on accessibility, safety, and independent living. Engineered an IoT-driven smart home platform featuring gesture recognition, voice automation, fall detection, and environmental sensing using ESP32, MPU6050, PIR sensors, and relays. Designed a React-based real-time dashboard with MQTT/WebSocket communication, sub-second event updates, and Firebase integration for auth and cloud sync.</p>
+              </div>
+              
+              <div style="background: linear-gradient(135deg, rgba(249,115,22,0.1), rgba(254,215,170,0.1)); padding: 25px; border-radius: 20px; border: 1px solid rgba(249,115,22,0.2); transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(249,115,22,0.1);" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 8px 25px rgba(249,115,22,0.2)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 15px rgba(249,115,22,0.1)';">
+                <h4 style="margin: 0 0 12px 0; font-size: 18px; font-weight: 700; color: var(--color-text);">CollabMeet – Real-Time Video Conferencing & Collaboration Suite</h4>
+                <p style="margin: 0; font-size: 14px; line-height: 1.6; color: var(--color-text); opacity: 0.9;">A unified communication platform combining WebRTC video calls, collaborative whiteboard, and real-time messaging. Developed a feature-rich collaboration platform powered by WebRTC peer-to-peer video calls, HD screen sharing, and latency-optimized whiteboarding with synchronized drawing. Integrated real-time chat, session management with unique meeting IDs, host controls, and device-agnostic responsiveness for browser-based usage without installations.</p>
+              </div>
+              
+              <div style="background: linear-gradient(135deg, rgba(6,182,212,0.1), rgba(165,243,252,0.1)); padding: 25px; border-radius: 20px; border: 1px solid rgba(6,182,212,0.2); transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(6,182,212,0.1);" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 8px 25px rgba(6,182,212,0.2)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 15px rgba(6,182,212,0.1)';">
+                <h4 style="margin: 0 0 12px 0; font-size: 18px; font-weight: 700; color: var(--color-text);">Navion – AI-Powered Smart Navigation and Discovery Platform</h4>
+                <p style="margin: 0; font-size: 14px; line-height: 1.6; color: var(--color-text); opacity: 0.9;">A next-generation navigation system with intelligent routing, AR-powered guidance, and social discovery features. Created an interactive mapping platform featuring AI voice assistant navigation, dynamic multi-theme maps, real-time traffic, and weather-aware routing. Built a smart search engine with predictive suggestions and multimodal routing (car, walk, bike, public transport). Designed a social discovery layer enabling location sharing, personalized recommendations, and community-based exploration.</p>
+              </div>
+              
+              <div style="background: linear-gradient(135deg, rgba(139,92,246,0.1), rgba(196,181,253,0.1)); padding: 25px; border-radius: 20px; border: 1px solid rgba(139,92,246,0.2); transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(139,92,246,0.1);" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 8px 25px rgba(139,92,246,0.2)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 15px rgba(139,92,246,0.1)';">
+                <h4 style="margin: 0 0 12px 0; font-size: 18px; font-weight: 700; color: var(--color-text);">Artificial Intelligence & Cloud Technology Intern</h4>
+                <p style="margin: 0 0 8px 0; font-size: 13px; font-weight: 600; color: var(--color-text); opacity: 0.8;">AICTE – Edunet Foundation | IBM SkillsBuild (Sep 9, 2025 – Oct 7, 2025)</p>
+                <p style="margin: 0; font-size: 14px; line-height: 1.6; color: var(--color-text); opacity: 0.9;">Executed 4-week intensive AI & Cloud internship with hands-on experience in machine learning pipelines and enterprise-level cloud deployments. Designed and implemented real-world AI solutions under mentorship, applying best practices in model training, data preprocessing, and deployment. Achieved official AICTE & Edunet certification (ID: STU67b31cee4cd261739791598) endorsed by Dr. Buddha Chandrasekhar and Nagesh Singh.</p>
+              </div>
+              
+            </div>
           </div>
         </section>
 
@@ -181,41 +284,45 @@
           </div>
 
           <div class="section-detail-wrapper">
-            <h3 class="section-heading">
-              <a style="color: inherit" href="https://github.com/abhishekgiri"
-                >GitHub</a
-              >
-            </h3>
-            <p class="section-text">
-              Explore my open-source projects, AI/ML implementations, and full-stack applications. Always building something innovative!
-            </p>
-            <h3 class="section-heading">
-              <a
-                style="color: inherit"
-                href="https://www.linkedin.com/in/abhishek-giri"
-                >LinkedIn</a
-              >
-            </h3>
-            <p class="section-text">
-              Connect with me for professional opportunities, collaborations, and tech discussions. Let's build the future together!
-            </p>
-            <h3 class="section-heading">
-              <a style="color: inherit" href="mailto:abhishek@codeag.io"
-                >Email</a
-              >
-            </h3>
-            <p class="section-text">
-              Have a project idea or want to collaborate? Drop me a line! I'm always excited to work on innovative AI/ML projects.
-            </p>
-            <h3 class="section-heading">
-              <a
-                style="color: inherit"
-                href="https://agnix.netlify.app"
-                >Agnix Website</a
-              >
-            </h3>
-            <p class="section-text">
-              Visit Agnix to explore my complete portfolio, detailed case studies, technical blogs, and latest AI/ML research work.
+            <div style="display: flex; flex-direction: column; gap: 20px; margin-bottom: 30px;">
+              <a href="https://github.com/abhishekgiri04" target="_blank" style="background: linear-gradient(135deg, rgba(36,41,46,0.1), rgba(88,96,105,0.1)); color: var(--color-text); padding: 20px; border-radius: 15px; text-decoration: none; transition: all 0.3s ease; box-shadow: 0 8px 25px rgba(36,41,46,0.15); border: 2px solid rgba(36,41,46,0.2); display: block;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 15px 35px rgba(36,41,46,0.25)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 8px 25px rgba(36,41,46,0.15)';">
+                <h4 style="margin: 0 0 8px 0; font-size: 18px; font-weight: 700; color: var(--color-text);">GitHub</h4>
+                <p style="margin: 0; font-size: 14px; opacity: 0.9; line-height: 1.4; color: var(--color-text);">30+ repositories of AI/ML implementations and full-stack solutions. Open-source innovation at its finest.</p>
+              </a>
+              
+              <a href="https://www.linkedin.com/in/abhishek-giri04/" target="_blank" style="background: linear-gradient(135deg, rgba(0,119,181,0.1), rgba(0,88,133,0.1)); color: var(--color-text); padding: 20px; border-radius: 15px; text-decoration: none; transition: all 0.3s ease; box-shadow: 0 8px 25px rgba(0,119,181,0.15); border: 2px solid rgba(0,119,181,0.2); display: block;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 15px 35px rgba(0,119,181,0.25)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 8px 25px rgba(0,119,181,0.15)';">
+                <h4 style="margin: 0 0 8px 0; font-size: 18px; font-weight: 700; color: var(--color-text);">LinkedIn</h4>
+                <p style="margin: 0; font-size: 14px; opacity: 0.9; line-height: 1.4; color: var(--color-text);">Professional networking for collaborations and opportunities. Let's build the future together.</p>
+              </a>
+              
+              <a href="https://portfolio-abhinova.vercel.app" target="_blank" style="background: linear-gradient(135deg, rgba(99,102,241,0.1), rgba(79,70,229,0.1)); color: var(--color-text); padding: 20px; border-radius: 15px; text-decoration: none; transition: all 0.3s ease; box-shadow: 0 8px 25px rgba(99,102,241,0.15); border: 2px solid rgba(99,102,241,0.2); display: block;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 15px 35px rgba(99,102,241,0.25)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 8px 25px rgba(99,102,241,0.15)';">
+                <h4 style="margin: 0 0 8px 0; font-size: 18px; font-weight: 700; color: var(--color-text);">Portfolio</h4>
+                <p style="margin: 0; font-size: 14px; opacity: 0.9; line-height: 1.4; color: var(--color-text);">Complete portfolio with case studies, project demos, and AI/ML research showcases.</p>
+              </a>
+              
+              <a href="https://leetcode.com/u/AbhishekGiri0405/" target="_blank" style="background: linear-gradient(135deg, rgba(255,161,22,0.1), rgba(255,140,0,0.1)); color: var(--color-text); padding: 20px; border-radius: 15px; text-decoration: none; transition: all 0.3s ease; box-shadow: 0 8px 25px rgba(255,161,22,0.15); border: 2px solid rgba(255,161,22,0.2); display: block;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 15px 35px rgba(255,161,22,0.25)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 8px 25px rgba(255,161,22,0.15)';">
+                <h4 style="margin: 0 0 8px 0; font-size: 18px; font-weight: 700; color: var(--color-text);">LeetCode</h4>
+                <p style="margin: 0; font-size: 14px; opacity: 0.9; line-height: 1.4; color: var(--color-text);">200+ problems solved. Strong DSA fundamentals and algorithmic expertise.</p>
+              </a>
+              
+              <a href="https://linktr.ee/CodeAG.io" target="_blank" style="background: linear-gradient(135deg, rgba(57,224,155,0.1), rgba(45,212,191,0.1)); color: var(--color-text); padding: 20px; border-radius: 15px; text-decoration: none; transition: all 0.3s ease; box-shadow: 0 8px 25px rgba(57,224,155,0.15); border: 2px solid rgba(57,224,155,0.2); display: block;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 15px 35px rgba(57,224,155,0.25)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 8px 25px rgba(57,224,155,0.15)';">
+                <h4 style="margin: 0 0 8px 0; font-size: 18px; font-weight: 700; color: var(--color-text);">Linktree</h4>
+                <p style="margin: 0; font-size: 14px; opacity: 0.9; line-height: 1.4; color: var(--color-text);">Centralized hub for all professional links and digital presence. One-stop access.</p>
+              </a>
+              
+              <a href="mailto:abhishekgiri1978@gmail.com" style="background: linear-gradient(135deg, rgba(234,67,53,0.1), rgba(211,59,44,0.1)); color: var(--color-text); padding: 20px; border-radius: 15px; text-decoration: none; transition: all 0.3s ease; box-shadow: 0 8px 25px rgba(234,67,53,0.15); border: 2px solid rgba(234,67,53,0.2); display: block;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 15px 35px rgba(234,67,53,0.25)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 8px 25px rgba(234,67,53,0.15)';">
+                <h4 style="margin: 0 0 8px 0; font-size: 18px; font-weight: 700; color: var(--color-text);">Gmail</h4>
+                <p style="margin: 0; font-size: 14px; opacity: 0.9; line-height: 1.4; color: var(--color-text);">Direct communication for project collaborations and AI/ML opportunities.</p>
+              </a>
+              
+              <a href="https://t.me/AbhishekGiri7" target="_blank" style="background: linear-gradient(135deg, rgba(0,136,204,0.1), rgba(0,107,179,0.1)); color: var(--color-text); padding: 20px; border-radius: 15px; text-decoration: none; transition: all 0.3s ease; box-shadow: 0 8px 25px rgba(0,136,204,0.15); border: 2px solid rgba(0,136,204,0.2); display: block;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 15px 35px rgba(0,136,204,0.25)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 8px 25px rgba(0,136,204,0.15)';">
+                <h4 style="margin: 0 0 8px 0; font-size: 18px; font-weight: 700; color: var(--color-text);">Telegram</h4>
+                <p style="margin: 0; font-size: 14px; opacity: 0.9; line-height: 1.4; color: var(--color-text);">Instant communication for tech discussions and quick project updates.</p>
+              </a>
+            </div>
+            
+            <p class="section-text" style="text-align: center; margin-top: 30px; font-size: 16px; opacity: 0.9;">
+              Open to collaborating on high-impact solutions across AI, full-stack, IoT, automation, and cloud technologies.
             </p>
           </div>
         </section>

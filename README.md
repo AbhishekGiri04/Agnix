@@ -1,7 +1,7 @@
 <h1 align="center">🌐 Agnix — Professional AI & ML Developer Website</h1>
 
 <p align="center">
-  🚀 Modern interactive portfolio website showcasing AI/ML expertise, innovative projects, and professional achievements with stunning 3D visuals and responsive design.
+  🚀 Modern interactive website showcasing AI/ML expertise, innovative projects, and professional achievements with stunning 3D visuals and responsive design.
 </p>
 
 <p align="center">
@@ -30,7 +30,7 @@ Agnix is the official website of **Abhishek Giri**, an AI & ML Developer and Ful
 - 📱 **Fully Responsive Design** optimized for all devices and screen sizes
 - ⚡ **Smooth Scroll Animations** with custom parallax effects
 - 🎯 **Professional Sections** including About, Work, and Contact
-- 🏆 **Achievement Badges** showcasing competition success and rankings
+- 🏆 **Skill Badges** with color indicators and hover effects
 - 🚀 **Fast Loading** with optimized assets and lazy loading
 
 <br>
@@ -42,9 +42,9 @@ Agnix is the official website of **Abhishek Giri**, an AI & ML Developer and Ful
 ✅  **Stunning 3D visuals** with interactive 3D models and animations  
 ✅  **Smooth scrolling experience** with custom scroll-based animations  
 ✅  **Theme switcher** for dark and light mode preferences  
-✅  **Professional portfolio sections** with detailed project showcases  
-✅  **Achievement highlights** including SAARTHI, MARITHON, and Amazon ML Challenge  
-✅  **Responsive navigation** with mobile-friendly menu and interactions  
+✅  **Professional sections** with modern card-based layouts  
+✅  **Detailed project showcases** with 6 major AI/ML and full-stack projects  
+✅  **Enhanced contact section** with 7 professional networking links  
 ✅  **Optimized performance** with compressed assets and efficient loading
 
 <br>
@@ -101,7 +101,6 @@ Agnix is the official website of **Abhishek Giri**, an AI & ML Developer and Ful
 ```
 Agnix/
 ├── 📂 assets/                      # 🎨 Static assets and resources
-│   ├── 📄 favicon.738ee8b0.svg     # 🔖 Website favicon
 │   ├── 📄 index.034a5313.css       # 🎨 Compiled CSS styles
 │   └── 📄 index.b8dab8e6.js        # ⚡ Compiled JavaScript bundle
 ├── 📂 docs/                        # 📸 Documentation and screenshots
@@ -127,10 +126,10 @@ Agnix/
 │   └── 📄 screenshot.png           # 📸 Social preview image
 ├── 📂 textures/                    # 🖼️ Texture files and videos
 │   └── 📄 kda.mp4                  # 🎬 Background video texture
+├── 📄 _redirects                   # 🔄 Netlify redirects config
 ├── 📄 CNAME                        # 🌐 Custom domain configuration
 ├── 📄 index.html                   # 🏠 Main HTML entry point
 ├── 📄 netlify.toml                 # ⚙️ Netlify deployment config
-├── 📄 _redirects                   # 🔄 Netlify redirects config
 ├── 📄 .gitignore                   # 🚫 Git ignore rules
 └── 📄 README.md                    # 📖 Project documentation
 ```
@@ -258,26 +257,31 @@ Visit the live website: **[Agnix](https://agnix.netlify.app)**
 ### 🏠 Home
 - Hero section with animated introduction
 - Interactive 3D background scene
-- Professional tagline and achievement badges
+- Professional tagline and skill badges with color indicators
 - Smooth scroll indicator
 
 ### ℹ️ About Me
-- Professional background and expertise
-- AI/ML specialization highlights
-- Competition achievements and rankings
-- Technical skills and interests
+- Professional background and expertise with elegant styling
+- AI/ML specialization and achievements
+- Competition success and certifications
+- Technical skills and career objectives
 
 ### 💼 My Work
-- AI-Powered Healthcare Assistant
-- Smart Recommendation Engine
-- Real-time Analytics Dashboard
-- Computer Vision Security System
+- CodeSphere – Real-Time Collaborative Code Editor Platform
+- Maritime Intelligence Platform – AI-Powered SOF Document Processing
+- SmartAssist Home – IoT Accessibility & Automation Ecosystem
+- CollabMeet – Real-Time Video Conferencing & Collaboration Suite
+- Navion – AI-Powered Smart Navigation and Discovery Platform
+- AICTE-Edunet Foundation AI & Cloud Technology Internship
 
 ### 📞 Contact
-- GitHub profile and repositories
-- LinkedIn professional network
-- Email for collaboration
-- Portfolio website link
+- GitHub – 30+ repositories
+- LinkedIn – Professional networking
+- Portfolio – Complete case studies
+- LeetCode – 200+ problems solved
+- Linktree – All professional links
+- Gmail – Direct communication
+- Telegram – Instant messaging
 
 <br>
 
@@ -296,12 +300,13 @@ Visit the live website: **[Agnix](https://agnix.netlify.app)**
 
 ---
 
-## 🎯 Key Achievements Showcased
+## 🎯 Key Highlights
 
-- 🏆 **SAARTHI FINALIST** — Innovation in AI/ML solutions
-- 🏆 **MARITHON FINALIST** — Hackathon excellence and problem-solving
-- 🏆 **AMAZON ML CHALLENGE RANK 234** — Machine learning competition success
-- 🏆 **AI RESEARCHER** — Continuous research and development in AI
+- 🐍 **Python Specialist** — Advanced Python development and automation
+- ☕ **Java Expert** — Enterprise Java applications and frameworks
+- 🔌 **IoT Explorer** — Internet of Things and embedded systems
+- 🏆 **National Hackathon Finalist** — Competition excellence and innovation
+- 🤖 **AI Researcher** — Continuous research in artificial intelligence
 
 <br>
 
@@ -329,14 +334,14 @@ Visit the live website: **[Agnix](https://agnix.netlify.app)**
 **👤 Abhishek Giri**  
 *AI & ML Developer | Full-Stack Development Enthusiast*
 
-<a href="https://www.linkedin.com/in/abhishek-giri">
+<a href="https://www.linkedin.com/in/abhishek-giri04/">
   <img src="https://img.shields.io/badge/Connect%20on-LinkedIn-blue?style=for-the-badge&logo=linkedin" alt="LinkedIn - Abhishek Giri"/>
 </a>  
 <a href="https://github.com/AbhishekGiri04">
   <img src="https://img.shields.io/badge/Follow%20on-GitHub-black?style=for-the-badge&logo=github" alt="GitHub - Abhishek Giri"/>
 </a>  
-<a href="mailto:abhishek@codeag.io">
-  <img src="https://img.shields.io/badge/Email-abhishek@codeag.io-red?style=for-the-badge&logo=gmail" alt="Email - Abhishek Giri"/>
+<a href="mailto:abhishekgiri1978@gmail.com">
+  <img src="https://img.shields.io/badge/Email-abhishekgiri1978@gmail.com-red?style=for-the-badge&logo=gmail" alt="Email - Abhishek Giri"/>
 </a>
 
 <br/>
