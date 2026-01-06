@@ -200,7 +200,7 @@ Agnix/
 
 ## 🌐 Live Demo
 
-Visit the live website: **[Agnix](https://agnix.vercel.app)**
+Visit the live website: **[Agnix](https://agnix-dev.vercel.app)**
 
 </div>
 
